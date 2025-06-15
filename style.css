@@ -1,6 +1,6 @@
 /* --- Importowanie czcionek z Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-/* Usunęliśmy import Creepster - nie jest już potrzebna */
+/* Usunięto import Creepster, ponieważ VT323 jest używana wszędzie */
 
 /* --- Generalne style dla całej strony --- */
 body {
@@ -320,6 +320,59 @@ footer p {
     box-shadow: 0 0 10px #ff6600; /* Pomarańczowy blask dla sumy */
 }
 
+/* --- Style specyficzne dla strony Prześlij Aktualizację --- */
+.submit-update-section {
+    padding: 30px;
+    background-color: rgba(40, 0, 0, 0.5); /* Ciemniejsze tło sekcji, jak w innych sekcjach */
+    border-left: 5px solid #990000; /* Gruba, krwista linia z boku */
+    border-right: 5px solid #990000;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8); /* Wewnętrzny cień dla głębi */
+    border-radius: 8px;
+    margin-bottom: 50px;
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.submit-update-section h2 {
+    font-family: 'VT323', monospace; /* VT323 dla nagłówka sekcji */
+    color: #66ff66; /* Seledynowy kolor */
+    font-size: 2.8em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px #000000, 5px 5px #330000;
+}
+
+.submit-update-section p {
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    color: #cccccc;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Wyśrodkowanie tekstu p */
+}
+
+.form-container {
+    background-color: rgba(20, 0, 0, 0.7); /* Dopasowane tło do głównego kontenera, jak w generatorze kości */
+    padding: 20px; /* Zmniejsz padding, żeby formularz miał więcej miejsca */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Mroczny cień */
+    border: 2px solid #660000; /* Ciemnoczerwona ramka */
+    width: 100%; /* Rozciągnij na całą dostępną szerokość */
+    max-width: 800px; /* Maksymalna szerokość kontenera formularza */
+    margin: 0 auto; /* Centrowanie kontenera formularza */
+    box-sizing: border-box; /* Uwzględnij padding w szerokości */
+}
+
+iframe {
+    width: 100%;
+    height: 800px; /* Domyślna wysokość iframe */
+    border: none; /* Usuń domyślne obramowanie iframe */
+    background-color: #1a0a0a; /* Upewnij się, że tło iframe pasuje do tła strony */
+    color: #e0e0e0; /* Ustaw kolor tekstu w iframe, jeśli to możliwe (zależy od formularza) */
+    font-family: 'VT323', monospace; /* Spróbuj zastosować czcionkę, ale może nie zadziałać dla zewnętrznych formularzy */
+}
+
 /* --- Dodatkowe efekty / klasy --- */
 .pixel-art-image {
     /* Użyj tej klasy dla obrazów, które chcesz stylizować na pixel-art */
@@ -350,4 +403,50 @@ footer p {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #990000;
+}
+
+/* Responsywność dla mniejszych ekranów - globalne, lub specyficzne dla sekcji */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+    iframe {
+        height: 600px; /* Dalsze zmniejszenie wysokości na małych ekranach */
+    }
+    header h1 {
+        font-size: 2.5em; /* Zmniejsz rozmiar nagłówka na małych ekranach */
+        letter-spacing: 2px;
+    }
+    nav ul {
+        flex-direction: column; /* Linki nawigacji w kolumnie na małych ekranach */
+        gap: 10px;
+    }
+    nav ul li a {
+        font-size: 1.2em; /* Zmniejsz rozmiar linków nawigacji */
+        padding: 8px 12px;
+    }
+    section h2 {
+        font-size: 2em;
+    }
+}
+
+/* Dodatkowe media queries dla bardzo małych ekranów (np. telefony pionowo) */
+@media (max-width: 480px) {
+    main {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    section {
+        padding: 15px;
+    }
+    .quest-entry {
+        padding: 15px;
+    }
+    button, input[type="submit"] {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+    .submit-update-section p {
+        font-size: 1em;
+    }
 }
