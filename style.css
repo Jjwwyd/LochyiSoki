@@ -36,27 +36,47 @@ header h1 {
 /* --- Nawigacja --- */
 nav ul {
     padding: 0;
-    list-style: none;
+    list-style: none; /* Usuwamy domyślne kropki list */
     margin-top: 20px;
+    display: flex; /* Ustawiamy elementy obok siebie (poziomo) */
+    justify-content: center; /* Centrujemy linki na środku */
+    gap: 30px; /* Dodajemy odstęp między linkami */
+    flex-wrap: wrap; /* Pozwalamy na zawijanie się linków na mniejszych ekranach */
 }
 
 nav ul li {
-    display: inline-block; /* Elementy w jednej linii */
-    margin: 0 25px; /* Większe odstępy */
+    /* display: inline-block; - Niepotrzebne już przy flexboxie */
+    margin: 0; /* Zerujemy marginesy, bo używamy gap */
 }
 
 nav ul li a {
     color: #ff6666; /* Jaśniejsza czerwień */
     text-decoration: none;
     font-family: 'VT323', monospace; /* VT323 dla nawigacji */
-    font-size: 1.4em;
+    font-size: 1.5em; /* Nieco większa czcionka dla lepszej widoczności */
     text-transform: uppercase;
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Płynne przejścia */
+    padding: 10px 15px; /* Dodajemy padding dla większego obszaru kliknięcia */
+    border: 2px solid transparent; /* Przezroczysta ramka, która pojawi się na hover */
+    border-radius: 5px; /* Lekko zaokrąglone rogi, jak na ekranach terminali */
+    transition: all 0.3s ease; /* Płynne przejścia dla wszystkich właściwości */
+    text-shadow: 1px 1px #000000; /* Delikatny cień tekstu */
 }
 
 nav ul li a:hover {
     color: #66ff66; /* Seledynowy kolor przy najechaniu */
     text-shadow: 0 0 10px #33cc33, 0 0 20px #33cc33; /* Seledynowy efekt "glow" */
+    background-color: rgba(70, 0, 0, 0.4); /* Lekko ciemniejsze tło przy najechaniu */
+    border-color: #66ff66; /* Seledynowa ramka przy najechaniu */
+    transform: translateY(-2px); /* Delikatne uniesienie przy najechaniu */
+}
+
+/* Styl dla aktywnego linku (opcjonalne - musiałbyś dodać klasę 'active' do bieżącego linku w HTML) */
+/* Przykład: <a href="diceroll.html" class="active">Rzut kośćmi</a> */
+nav ul li a.active {
+    color: #66ff66; /* Zawsze seledynowy dla aktywnego linku */
+    border-color: #66ff66;
+    background-color: rgba(70, 0, 0, 0.6);
+    box-shadow: 0 0 15px #66ff66;
 }
 
 /* --- Główna zawartość stron (main) --- */
