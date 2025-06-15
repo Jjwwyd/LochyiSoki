@@ -1,0 +1,164 @@
+/* Generalne style dla ciała strony */
+body {
+    font-family: 'Press Start 2P', cursive, monospace; /* Klasyczna czcionka pixel-art - musisz ją zaimportować! */
+    background-color: #1a0a0a; /* Bardzo ciemny burgund/brąz - kolor krwi i piekła */
+    color: #e0e0e0; /* Jasny, ale nie śnieżnobiały tekst dla kontrastu */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Zapobiega poziomemu przewijaniu */
+    cursor: url('ścieżka/do/cursora.png'), auto; /* Opcjonalny niestandardowy kursor (np. stylizowany celownik) */
+}
+
+/* Importowanie czcionek - dodaj to na początku pliku CSS */
+/* Możesz użyć Google Fonts, np. "Press Start 2P" */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Header - nagłówek strony */
+header {
+    background-color: #3d0000; /* Ciemniejszy, głęboki burgund */
+    color: #ff3333; /* Czerwień - krew, ogień, zagrożenie */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #660000; /* Gruby, krwisty pasek */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7); /* Mroczny cień */
+}
+
+header h1 {
+    font-family: 'Press Start 2P', cursive, monospace;
+    font-size: 3em; /* Duży, agresywny tytuł */
+    text-transform: uppercase;
+    text-shadow: 4px 4px #000000, 6px 6px #660000; /* Cień w stylu retro */
+    letter-spacing: 5px; /* Rozstrzelone litery */
+}
+
+/* Nawigacja */
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline-block; /* Elementy w jednej linii */
+    margin: 0 25px; /* Większe odstępy */
+}
+
+nav ul li a {
+    color: #ff6666; /* Jaśniejsza czerwień */
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive, monospace;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Płynne przejścia */
+}
+
+nav ul li a:hover {
+    color: #ffff00; /* Jaskrawy, nieziemski żółty/złoty przy najechaniu */
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; /* Efekt "glow" */
+}
+
+/* Główna zawartość strony */
+main {
+    padding: 40px 20px;
+    max-width: 1000px; /* Nieco szersza strona */
+    margin: 40px auto; /* Większe marginesy pionowe */
+    background-color: rgba(20, 0, 0, 0.7); /* Lekko przezroczyste tło dla sekcji */
+    border: 2px solid #660000; /* Krwista ramka */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9); /* Bardzo mroczny cień */
+    border-radius: 8px; /* Lekko zaokrąglone rogi */
+}
+
+section {
+    margin-bottom: 50px; /* Większe odstępy między sekcjami */
+    padding: 30px;
+    background-color: rgba(40, 0, 0, 0.5); /* Ciemniejsze tło sekcji */
+    border-left: 5px solid #990000; /* Gruba, krwista linia z boku */
+    border-right: 5px solid #990000;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8); /* Wewnętrzny cień dla głębi */
+}
+
+section h2 {
+    font-family: 'Press Start 2P', cursive, monospace;
+    color: #ff9933; /* Zgaszony pomarańcz/rdza */
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px #000000, 5px 5px #330000;
+}
+
+section p {
+    font-family: 'Arial', sans-serif; /* Bardziej czytelna czcionka dla dłuższego tekstu */
+    font-size: 1.1em;
+    color: #cccccc;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Stopka */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #200000; /* Bardzo ciemny odcień burgundu */
+    color: #808080; /* Zgaszony szary */
+    font-size: 0.9em;
+    border-top: 2px solid #4d0000; /* Ciemniejsza ramka */
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive, monospace;
+}
+
+/* Dodatkowe efekty/klasy, które możesz wykorzystać */
+.pixel-art-image {
+    /* Użyj tej klasy dla obrazów, które chcesz stylizować na pixel-art */
+    image-rendering: optimizeSpeed;             /* Huraaay */
+    image-rendering: -moz-crisp-edges;          /* Firefox */
+    image-rendering: -o-crisp-edges;            /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;   /* IE */
+    filter: drop-shadow(0px 0px 5px #ff0000); /* Delikatna czerwona poświata wokół obrazów */
+}
+
+/* Efekty najechania dla ogólnych elementów (np. przycisków, jeśli dodasz) */
+button, input[type="submit"] {
+    background-color: #660000;
+    color: #ffdddd;
+    border: 2px solid #ff3333;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive, monospace;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #990000;
+    transform: scale(1.05); /* Lekkie powiększenie */
+    box-shadow: 0 0 15px #ff0000; /* Krwista poświata */
+}
+
+/* Scrollbar (niestandardowy, tylko dla przeglądarek wspierających) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a0a0a; /* Tło scrollbara */
+    border-left: 1px solid #330000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #660000; /* Kolor suwaka */
+    border-radius: 10px;
+    border: 2px solid #990000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #990000;
+}
