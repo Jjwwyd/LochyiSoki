@@ -78,7 +78,7 @@ nav ul li a:hover {
     background-color: rgba(122, 97, 78, 0.9);
     border-color: #f7e6c4;
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6), 0 0 20px #f7e6c4;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6), 0 0 18px #f7e6c4;
 }
 
 nav ul li a.active {
