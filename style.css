@@ -1,11 +1,12 @@
-/* Importowanie czcionek - dodajemy nową czcionkę */
-/* 'Creepster' idealnie pasuje do horroru/grozy */
-/* 'DotGothic16' jako alternatywa dla pikselowego tekstu */
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=DotGothic16&display=swap');
+/* Importowanie czcionek - zmieniamy na VT323 */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/* Nadal zachowujemy Creepster dla nagłówków, jeśli pasuje do Twojej wizji grozy */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
 
 /* Generalne style dla ciała strony */
 body {
-    font-family: 'DotGothic16', monospace; /* Nowa czcionka pikselowa dla ogólnego tekstu */
+    font-family: 'VT323', monospace; /* VT323 jako główna czcionka dla całej strony */
     background-color: #1a0a0a; /* Bardzo ciemny burgund/brąz - kolor krwi i piekła */
     color: #e0e0e0; /* Jasny, ale nie śnieżnobiały tekst dla kontrastu */
     line-height: 1.6;
@@ -26,7 +27,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Creepster', cursive; /* Czcionka "Creepster" dla głównego tytułu */
+    font-family: 'Creepster', cursive; /* Zachowujemy Creepster dla wyróżnienia tytułu */
     font-size: 3.5em; /* Jeszcze większy, agresywny tytuł */
     text-transform: uppercase;
     text-shadow: 4px 4px #000000, 6px 6px #660000; /* Cień w stylu retro */
@@ -48,14 +49,14 @@ nav ul li {
 nav ul li a {
     color: #ff6666; /* Jaśniejsza czerwień */
     text-decoration: none;
-    font-family: 'DotGothic16', monospace; /* Czcionka pikselowa dla nawigacji */
-    font-size: 1.2em;
+    font-family: 'VT323', monospace; /* VT323 dla nawigacji */
+    font-size: 1.4em; /* Nieco większa czcionka dla lepszej czytelności VT323 */
     text-transform: uppercase;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #66ff66; /* **SELEDYNOWY KOLOR PRZY NAJECHANIU** */
+    color: #66ff66; /* Seledynowy kolor przy najechaniu */
     text-shadow: 0 0 10px #33cc33, 0 0 20px #33cc33; /* Seledynowy efekt "glow" */
 }
 
@@ -80,9 +81,9 @@ section {
 }
 
 section h2 {
-    font-family: 'Creepster', cursive; /* Czcionka "Creepster" dla nagłówków sekcji */
-    color: #66ff66; /* **SELEDYNOWY KOLOR DLA NAGŁÓWKÓW SEKCJI** */
-    font-size: 2.8em; /* Nieco większy nagłówek */
+    font-family: 'Creepster', cursive; /* Zachowujemy Creepster dla nagłówków sekcji */
+    color: #66ff66; /* Seledynowy kolor dla nagłówków sekcji */
+    font-size: 2.8em;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 25px;
@@ -90,8 +91,8 @@ section h2 {
 }
 
 section p {
-    font-family: 'DotGothic16', monospace; /* Pixelowa czcionka dla paragrafów */
-    font-size: 1.1em;
+    font-family: 'VT323', monospace; /* VT323 dla paragrafów */
+    font-size: 1.1em; /* Utrzymujemy dobrą czytelność */
     color: #cccccc;
     text-align: justify;
     margin-bottom: 15px;
@@ -110,7 +111,7 @@ footer {
 
 footer p {
     margin: 0;
-    font-family: 'DotGothic16', monospace; /* Pixelowa czcionka dla stopki */
+    font-family: 'VT323', monospace; /* VT323 dla stopki */
 }
 
 /* Dodatkowe efekty/klasy, które możesz wykorzystać */
@@ -121,7 +122,7 @@ footer p {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor;
-    filter: drop-shadow(0px 0px 5px #ff0000); /* Delikatna czerwona poświata wokół obrazów */
+    filter: drop-shadow(0px 0px 5px #ff0000);
 }
 
 /* Efekty najechania dla ogólnych elementów (np. przycisków, jeśli dodasz) */
@@ -130,8 +131,8 @@ button, input[type="submit"] {
     color: #ffdddd;
     border: 2px solid #ff3333;
     padding: 10px 20px;
-    font-family: 'DotGothic16', monospace; /* Pixelowa czcionka dla przycisków */
-    font-size: 1em;
+    font-family: 'VT323', monospace; /* VT323 dla przycisków */
+    font-size: 1.2em; /* Nieco większa czcionka dla przycisków */
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
