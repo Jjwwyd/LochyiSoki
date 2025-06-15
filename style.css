@@ -1,9 +1,6 @@
 /* --- Importowanie czcionek z Google Fonts --- */
 /* MedievalSharp dla nagłówków i Lora dla tekstu głównego - obie obsługują polskie znaki */
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Lora:wght@400;700&display=swap');
-/* VT323 pozostało dla specyficznych elementów UI jak nawigacja i formularze,
-   ponieważ ma unikalny pixelowy wygląd. */
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 
 /* --- Generalne style dla całej strony --- */
@@ -63,7 +60,7 @@ nav ul {
 nav ul li a {
     color: #e8dcb9;
     text-decoration: none;
-    font-family: 'VT323', monospace; /* Pixelowa czcionka do menu */
+    font-family: 'MedievalSharp', serif; /* Zmieniono z VT323 na MedievalSharp */
     font-size: 1.6em;
     text-transform: uppercase;
     padding: 12px 20px;
@@ -183,7 +180,7 @@ label, select, input[type="number"], input[type="text"], textarea {
     display: block;
     margin: 20px auto;
     font-size: 1.3em;
-    font-family: 'VT323', monospace; /* Pixelowa czcionka dla inputów */
+    font-family: 'MedievalSharp', serif; /* Zmieniono z VT323 na MedievalSharp */
     color: #3b2b1d;
     background-color: #fdf5e6;
     border: 2px solid #a88d6c;
@@ -200,7 +197,7 @@ select option {
 }
 
 button, input[type="submit"] {
-    font-family: 'VT323', monospace; /* Pixelowa czcionka dla przycisków */
+    font-family: 'MedievalSharp', serif; /* Zmieniono z VT323 na MedievalSharp */
     font-size: 1.6em;
     background-color: #7a614e;
     color: #f7e6c4;
