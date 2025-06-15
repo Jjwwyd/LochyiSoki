@@ -1,45 +1,44 @@
 /* --- Importowanie czcionek z Google Fonts --- */
-/* Możesz tu dodać więcej czcionek, jeśli chcesz urozmaicić styl
-   np. bardziej ozdobną dla nagłówków lub "ręcznie pisaną" dla treści.
-   Dla prostoty na razie zostawiamy VT323 jako podstawę, ale można eksperymentować. */
-@import url('https://fonts.googleapis.com/css2?family=VT323&family=Fondamento&family=IM+Fell+Double+Pica&display=swap');
+/* MedievalSharp dla nagłówków i Lora dla tekstu głównego - obie obsługują polskie znaki */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Lora:wght@400;700&display=swap');
+/* VT323 pozostało dla specyficznych elementów UI jak nawigacja i formularze,
+   ponieważ ma unikalny pixelowy wygląd pasujący do "magicznego interfejsu". */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 
 /* --- Generalne style dla całej strony --- */
 body {
-    font-family: 'IM Fell Double Pica', serif; /* Czcionka stylizowana na ręczne pismo */
-    background: url('https://i.imgur.com/your-wood-texture.jpg') repeat; /* Wymień na ścieżkę do tekstury drewna */
-    background-color: #3b2b1d; /* Ciemny brąz na wypadek, gdy tekstura się nie załaduje */
+    font-family: 'Lora', serif; /* Główna czcionka dla tekstu, czytelna z polskimi znakami */
+    background-color: #3b2b1d; /* Ciemny brąz (drewno) */
     color: #e8dcb9; /* Kolor starego pergaminu/papieru */
     line-height: 1.8;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    cursor: url('https://i.imgur.com/your-feather-cursor.png'), auto; /* Opcjonalny niestandardowy kursor - np. pióro */
+    /* cursor: auto; Usunięto niestandardowy kursor, aby uniknąć problemów z plikami */
 }
 
 /* --- Header - nagłówek strony --- */
 header {
-    background: url('https://i.imgur.com/your-parchment-texture.jpg') repeat-x center bottom; /* Tekstura pergaminu na dole headera */
     background-color: #5c4a3b; /* Średni brąz */
     color: #f7e6c4; /* Złoty/jasnobeżowy */
     padding: 25px 0;
     text-align: center;
     border-bottom: 5px solid #a88d6c; /* Grubszy, jasny brązowy pasek */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Delikatny cień */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     position: relative;
     z-index: 10;
 }
 
 header h1 {
-    font-family: 'Fondamento', cursive; /* Ozdobna czcionka fantasy */
+    font-family: 'MedievalSharp', cursive; /* Ozdobna czcionka fantasy dla tytułu */
     font-size: 4.5em;
-    text-transform: capitalize; /* Zamiast uppercase, pierwsze litery wielkie */
-    text-shadow: 3px 3px #3b2b1d, 5px 5px #7a614e; /* Cień w stylu stempla */
+    text-transform: capitalize;
+    text-shadow: 3px 3px #3b2b1d, 5px 5px #7a614e;
     letter-spacing: 3px;
     margin: 0;
     position: relative;
-    padding-bottom: 15px; /* Miejsce na ozdobną linię */
+    padding-bottom: 15px;
 }
 
 header h1::after {
@@ -58,55 +57,58 @@ nav ul {
     margin-top: 25px;
     display: flex;
     justify-content: center;
-    gap: 40px; /* Większe odstępy */
+    gap: 40px;
     flex-wrap: wrap;
 }
 
 nav ul li a {
-    color: #e8dcb9; /* Kolor pergaminu */
+    color: #e8dcb9;
     text-decoration: none;
     font-family: 'VT323', monospace; /* Pixelowa czcionka do menu */
     font-size: 1.6em;
     text-transform: uppercase;
     padding: 12px 20px;
-    border: 2px solid #a88d6c; /* Brązowa ramka */
-    border-radius: 8px; /* Bardziej zaokrąglone */
-    background-color: rgba(92, 74, 59, 0.7); /* Półprzezroczysty brąz */
+    border: 2px solid #a88d6c;
+    border-radius: 8px;
+    background-color: rgba(92, 74, 59, 0.7);
     transition: all 0.4s ease;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 nav ul li a:hover {
-    color: #fffacd; /* Jaśniejszy beż/krem */
-    background-color: rgba(122, 97, 78, 0.9); /* Jaśniejszy brąz */
-    border-color: #f7e6c4; /* Złoty/jasnobeżowy */
-    transform: translateY(-3px) scale(1.02); /* Wyraźniejsze uniesienie i lekkie powiększenie */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6), 0 0 20px #f7e6c4; /* Delikatny złoty blask */
+    color: #fffacd;
+    background-color: rgba(122, 97, 78, 0.9);
+    border-color: #f7e6c4;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6), 0 0 20px #f7e6c4;
 }
 
 nav ul li a.active {
     color: #fffacd;
     border-color: #f7e6c4;
-    background-color: #7a614e; /* Stały, wyraźny brąz */
+    background-color: #7a614e;
     box-shadow: 0 0 18px #f7e6c4, inset 0 0 10px rgba(0,0,0,0.5);
 }
 
 /* --- Główna zawartość stron (main) --- */
 main {
     padding: 50px 30px;
-    max-width: 1100px; /* Jeszcze szersza strona dla "tablicy" */
+    max-width: 1100px;
     margin: 50px auto;
-    background: url('https://i.imgur.com/your-old-parchment-texture.jpg') repeat; /* Stara tekstura pergaminu */
-    background-color: #fdf5e6; /* Jasny beż na wypadek braku tekstury */
+    background-color: #fdf5e6; /* Jasny beż (pergamin) */
     border: 8px solid #7a614e; /* Gruba brązowa ramka, jak drewniana tablica */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 25px rgba(0,0,0,0.4); /* Wyraźny cień i wewnętrzny cień */
-    border-radius: 15px; /* Bardziej zaokrąglone rogi, jak stara tablica */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 25px rgba(0,0,0,0.4);
+    border-radius: 15px;
     position: relative;
 }
 
 /* --- Dekoracja dla głównej ramki (main) - "gwoździe" lub "pinezki" --- */
 main::before,
-main::after {
+main::after,
+main > .top-left-pin,
+main > .top-right-pin,
+main > .bottom-left-pin,
+main > .bottom-right-pin {
     content: '';
     position: absolute;
     width: 25px;
@@ -118,41 +120,23 @@ main::after {
     z-index: 1;
 }
 
-main::before {
-    top: 15px;
-    left: 15px;
-}
-
-main::after {
-    top: 15px;
-    right: 15px;
-}
-
-/* Dodatkowe "gwoździe" na dole dla symetrii */
-main::nth-of-type(2)::before {
-    bottom: 15px;
-    left: 15px;
-    top: auto; /* Reset top, aby bottom działało */
-}
-
-main::nth-of-type(2)::after {
-    bottom: 15px;
-    right: 15px;
-    top: auto; /* Reset top, aby bottom działało */
-}
+/* Pozycjonowanie gwoździ dla main - lepiej użyć klas w HTML */
+main > .top-left-pin { top: 15px; left: 15px; }
+main > .top-right-pin { top: 15px; right: 15px; }
+main > .bottom-left-pin { bottom: 15px; left: 15px; }
+main > .bottom-right-pin { bottom: 15px; right: 15px; }
 
 
 /* --- Ogólne style dla sekcji w main --- */
 section {
-    margin-bottom: 70px; /* Większe odstępy między "kartkami" */
+    margin-bottom: 70px;
     padding: 35px;
     background-color: rgba(255, 255, 255, 0.8); /* Lekko przezroczysty biały dla efektu papieru */
-    border: 3px dashed #7a614e; /* Przerywana brązowa ramka, jak przypięta kartka */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0,0,0,0.1); /* Ciekawe cienie */
-    border-radius: 10px; /* Lekko zaokrąglone rogi */
+    border: 3px dashed #7a614e;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
     position: relative;
     transform: rotate(calc((var(--i, 0) - 0.5) * 1.5deg)); /* Delikatne, losowe pochylenie */
-    /* Zastosowanie zmiennej --i w HTML do nadania różnego obrotu, np. style="--i:1;" */
 }
 
 /* Mini pinezka na każdej sekcji */
@@ -171,40 +155,39 @@ section::before {
     z-index: 2;
 }
 
-
 section:last-of-type {
     margin-bottom: 0;
 }
 
 section h2 {
-    font-family: 'Fondamento', cursive; /* Ozdobna czcionka dla nagłówków sekcji */
+    font-family: 'MedievalSharp', cursive; /* Ozdobna czcionka dla nagłówków sekcji */
     color: #4a3c2e; /* Ciemny brąz */
     font-size: 3.2em;
     text-transform: capitalize;
     text-align: center;
     margin-bottom: 30px;
-    text-shadow: 2px 2px #d2b48c; /* Jasnobrązowy cień */
-    border-bottom: 2px solid #a88d6c; /* Brązowa linia pod nagłówkiem */
+    text-shadow: 2px 2px #d2b48c;
+    border-bottom: 2px solid #a88d6c;
     padding-bottom: 10px;
 }
 
 section p {
-    font-family: 'IM Fell Double Pica', serif;
+    font-family: 'Lora', serif;
     font-size: 1.2em;
     color: #3b2b1d; /* Bardzo ciemny brąz dla tekstu */
     text-align: justify;
     margin-bottom: 20px;
 }
 
-/* --- Style dla elementów formulrza / interaktywnych --- */
+/* --- Style dla elementów formularza / interaktywnych --- */
 label, select, input[type="number"], input[type="text"], textarea {
     display: block;
     margin: 20px auto;
     font-size: 1.3em;
-    font-family: 'VT323', monospace;
-    color: #3b2b1d; /* Ciemny tekst */
-    background-color: #fdf5e6; /* Jasne tło inputów */
-    border: 2px solid #a88d6c; /* Brązowa ramka */
+    font-family: 'VT323', monospace; /* Pixelowa czcionka dla inputów */
+    color: #3b2b1d;
+    background-color: #fdf5e6;
+    border: 2px solid #a88d6c;
     padding: 12px;
     width: 70%;
     max-width: 400px;
@@ -218,10 +201,10 @@ select option {
 }
 
 button, input[type="submit"] {
-    font-family: 'VT323', monospace;
+    font-family: 'VT323', monospace; /* Pixelowa czcionka dla przycisków */
     font-size: 1.6em;
-    background-color: #7a614e; /* Średni brąz */
-    color: #f7e6c4; /* Złoty/jasnobeżowy */
+    background-color: #7a614e;
+    color: #f7e6c4;
     border: 2px solid #a88d6c;
     padding: 18px 35px;
     cursor: pointer;
@@ -233,7 +216,7 @@ button, input[type="submit"] {
 }
 
 button:hover, input[type="submit"]:hover {
-    background-color: #a88d6c; /* Jaśniejszy brąz */
+    background-color: #a88d6c;
     color: #fffacd;
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6), 0 0 25px #f7e6c4;
@@ -243,8 +226,8 @@ button:hover, input[type="submit"]:hover {
 footer {
     text-align: center;
     padding: 30px;
-    background-color: #2e2319; /* Bardzo ciemny brąz */
-    color: #bfa88c; /* Zgaszony brązowy */
+    background-color: #2e2319;
+    color: #bfa88c;
     font-size: 1em;
     border-top: 3px solid #4a3c2e;
     margin-top: 70px;
@@ -253,38 +236,38 @@ footer {
 
 footer p {
     margin: 0;
-    font-family: 'IM Fell Double Pica', serif;
+    font-family: 'Lora', serif; /* Czcionka Lora dla stopki */
 }
 
 /* --- Style dla list zadań / wpisów (quest-category, quest-entry) --- */
 .quest-category {
     margin-bottom: 40px;
-    border: 2px solid #a88d6c; /* Brązowa ramka */
+    border: 2px solid #a88d6c;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    background-color: rgba(240, 230, 210, 0.9); /* Bardzo jasny, prawie biały pergamin */
+    background-color: rgba(240, 230, 210, 0.9);
     border-radius: 8px;
 }
 
-.quest-category h3 { /* Zmieniono h2 na h3 dla kategorii, aby dopasować do struktury HTML */
-    font-family: 'Fondamento', cursive;
+.quest-category h3 {
+    font-family: 'MedievalSharp', cursive; /* Ozdobna czcionka dla nagłówków kategorii */
     color: #4a3c2e;
     font-size: 2.2em;
     text-align: left;
     margin-bottom: 25px;
-    border-bottom: 1px solid #a88d6c; /* Delikatna brązowa linia */
+    border-bottom: 1px solid #a88d6c;
     padding-bottom: 8px;
     text-shadow: 1px 1px #d2b48c;
 }
 
 .quest-entry {
-    background-color: #fdf5e6; /* Najjaśniejszy kolor, jak pojedyncza kartka */
-    border: 1px solid #d2b48c; /* Delikatna ramka */
+    background-color: #fdf5e6;
+    border: 1px solid #d2b48c;
     padding: 18px;
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* Dla potencjalnych pinezek na wpisach */
+    position: relative;
 }
 
 .quest-entry:last-child {
@@ -292,46 +275,43 @@ footer p {
 }
 
 .quest-entry h3 {
-    font-family: 'IM Fell Double Pica', serif;
-    color: #6a5c4e; /* Średnio ciemny brąz */
+    font-family: 'Lora', serif; /* Czcionka Lora dla nazw wpisów */
+    color: #6a5c4e;
     font-size: 1.9em;
     margin-top: 0;
     margin-bottom: 12px;
-    text-shadow: none; /* Usuwamy cień dla nazwy wpisu */
-    border-bottom: 1px dashed #d2b48c; /* Przerywana linia pod nazwą */
+    text-shadow: none;
+    border-bottom: 1px dashed #d2b48c;
     padding-bottom: 5px;
 }
 
 .quest-entry p {
-    font-family: 'IM Fell Double Pica', serif;
+    font-family: 'Lora', serif; /* Czcionka Lora dla paragrafów w wpisach */
     font-size: 1.1em;
     color: #3b2b1d;
     margin-bottom: 8px;
 }
 
 .quest-entry strong {
-    color: #8b4513; /* Kolor ciemnego drewna/rdzy */
+    color: #8b4513;
 }
 
 /* --- Style dla stanów wpisów (aktywne, zakończone, placeholder) --- */
-
-/* Style dla sekcji ZAKOŃCZONYCH zadań / postaci */
 .completed-quests .quest-entry {
-    opacity: 0.6; /* Przyciemnienie */
-    filter: grayscale(40%); /* Większe odcienie szarości */
-    border-color: #bfa88c; /* Zgaszony brąz */
-    background-color: #ede4d1; /* Lekko przyciemniony pergamin */
+    opacity: 0.6;
+    filter: grayscale(40%);
+    border-color: #bfa88c;
+    background-color: #ede4d1;
     box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
 }
 
 .completed-quests .quest-entry h3 {
-    text-decoration: line-through; /* Przekreślony tekst */
-    color: #8b4513; /* Zgaszony brąz */
+    text-decoration: line-through;
+    color: #8b4513;
 }
 
-/* Styl dla placeholderów / nieaktywnych / nowych wpisów */
 .placeholder-quest {
-    background-color: #f5f0e1; /* Jaśniejsze, czyste tło */
+    background-color: #f5f0e1;
     border-style: dashed;
     border-color: #d2b48c;
     opacity: 0.8;
@@ -340,7 +320,7 @@ footer p {
 /* --- Separator w main (linia) --- */
 hr {
     border: none;
-    border-top: 3px dashed #7a614e; /* Przerywana linia w kolorze brązu */
+    border-top: 3px dashed #7a614e;
     margin: 60px auto;
     width: 80%;
 }
@@ -352,7 +332,7 @@ hr {
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.9); /* Jasne tło dla kontenera kości */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -362,7 +342,7 @@ hr {
 }
 
 .results-heading {
-    font-family: 'Fondamento', cursive;
+    font-family: 'MedievalSharp', cursive; /* Ozdobna czcionka dla nagłówka wyników */
     font-size: 2.5em;
     color: #4a3c2e;
     margin-bottom: 25px;
@@ -385,10 +365,10 @@ hr {
 }
 
 .total-result {
-    background-color: #e8dcb9; /* Kolor pergaminu */
-    border-color: #8b4513; /* Ciemniejszy brąz */
+    background-color: #e8dcb9;
+    border-color: #8b4513;
     font-weight: bold;
-    color: #8b4513; /* Ciemny brąz dla sumy */
+    color: #8b4513;
     font-size: 1.8em;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
@@ -400,7 +380,7 @@ hr {
 }
 
 .submit-update-section p {
-    font-family: 'IM Fell Double Pica', serif;
+    font-family: 'Lora', serif; /* Czcionka Lora dla paragrafu */
     font-size: 1.3em;
     color: #3b2b1d;
     margin-bottom: 40px;
@@ -426,9 +406,9 @@ iframe {
     width: 100%;
     height: 800px;
     border: none;
-    background-color: #fdf5e6; /* Tło iframe pasujące do pergaminu */
-    color: #3b2b1d; /* Kolor tekstu w iframe */
-    font-family: 'IM Fell Double Pica', serif;
+    background-color: #fdf5e6;
+    color: #3b2b1d;
+    font-family: 'Lora', serif; /* Czcionka Lora dla iframe */
 }
 
 /* --- Dodatkowe efekty / klasy --- */
@@ -440,7 +420,7 @@ iframe {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor;
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); /* Bardziej subtelny cień */
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 }
 
 /* --- Scrollbar (niestandardowy) --- */
@@ -449,18 +429,18 @@ iframe {
 }
 
 ::-webkit-scrollbar-track {
-    background: #4a3c2e; /* Ciemny brąz */
+    background: #4a3c2e;
     border-left: 2px solid #7a614e;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #a88d6c; /* Jasniejszy brąz */
+    background-color: #a88d6c;
     border-radius: 10px;
     border: 3px solid #7a614e;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #c0a880; /* Jaśniejszy brąz na hover */
+    background-color: #c0a880;
 }
 
 /* --- Responsywność dla mniejszych ekranów --- */
@@ -516,7 +496,7 @@ iframe {
     nav ul li a {
         font-size: 1.3em;
         padding: 10px 15px;
-        width: 80%; /* Linki na całą szerokość */
+        width: 80%;
         margin: 0 auto;
     }
     main {
@@ -524,21 +504,25 @@ iframe {
         margin: 20px auto;
         border-width: 3px;
     }
-    main::before, main::after, main::nth-of-type(2)::before, main::nth-of-type(2)::after {
+    /* Zmieniono selektory gwoździ/pinezek na klasy, aby działały poprawnie */
+    main > .top-left-pin,
+    main > .top-right-pin,
+    main > .bottom-left-pin,
+    main > .bottom-right-pin {
         width: 18px;
         height: 18px;
-        top: 8px; /* Mniejsze pinezki, bliżej krawędzi */
+        top: 8px;
         left: 8px;
     }
-    main::after { right: 8px; left: auto; }
-    main::nth-of-type(2)::before { bottom: 8px; top: auto; left: 8px;}
-    main::nth-of-type(2)::after { bottom: 8px; top: auto; right: 8px;}
+    main > .top-right-pin { right: 8px; left: auto; }
+    main > .bottom-left-pin { bottom: 8px; top: auto; left: 8px;}
+    main > .bottom-right-pin { bottom: 8px; top: auto; right: 8px;}
 
     section {
         padding: 15px;
         margin-bottom: 30px;
     }
-    section::before { /* Pinezka na sekcji */
+    section::before {
         width: 15px;
         height: 15px;
         top: -7px;
