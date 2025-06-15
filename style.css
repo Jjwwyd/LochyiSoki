@@ -1,21 +1,20 @@
 /* --- Importowanie czcionek z Google Fonts --- */
-/* MedievalSharp dla nagłówków i Lora dla tekstu głównego - obie obsługują polskie znaki */
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Lora:wght@400;700&display=swap');
+/* Roboto Slab dla nagłówków, Merriweather dla tekstu głównego - obie obsługują polskie znaki i są bez kursywy */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 /* VT323 pozostało dla specyficznych elementów UI jak nawigacja i formularze,
-   ponieważ ma unikalny pixelowy wygląd pasujący do "magicznego interfejsu". */
+   ponieważ ma unikalny pixelowy wygląd. */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 
 /* --- Generalne style dla całej strony --- */
 body {
-    font-family: 'Lora', serif; /* Główna czcionka dla tekstu, czytelna z polskimi znakami */
+    font-family: 'Merriweather', serif; /* Główna czcionka dla tekstu, czytelna z polskimi znakami, bez kursywy */
     background-color: #3b2b1d; /* Ciemny brąz (drewno) */
     color: #e8dcb9; /* Kolor starego pergaminu/papieru */
     line-height: 1.8;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* cursor: auto; Usunięto niestandardowy kursor, aby uniknąć problemów z plikami */
 }
 
 /* --- Header - nagłówek strony --- */
@@ -31,7 +30,7 @@ header {
 }
 
 header h1 {
-    font-family: 'MedievalSharp', cursive; /* Ozdobna czcionka fantasy dla tytułu */
+    font-family: 'Roboto Slab', serif; /* Czcionka slab-serif dla tytułu */
     font-size: 4.5em;
     text-transform: capitalize;
     text-shadow: 3px 3px #3b2b1d, 5px 5px #7a614e;
@@ -160,7 +159,7 @@ section:last-of-type {
 }
 
 section h2 {
-    font-family: 'MedievalSharp', cursive; /* Ozdobna czcionka dla nagłówków sekcji */
+    font-family: 'Roboto Slab', serif; /* Czcionka slab-serif dla nagłówków sekcji */
     color: #4a3c2e; /* Ciemny brąz */
     font-size: 3.2em;
     text-transform: capitalize;
@@ -172,7 +171,7 @@ section h2 {
 }
 
 section p {
-    font-family: 'Lora', serif;
+    font-family: 'Merriweather', serif; /* Czcionka Merriweather dla tekstu, bez kursywy */
     font-size: 1.2em;
     color: #3b2b1d; /* Bardzo ciemny brąz dla tekstu */
     text-align: justify;
@@ -236,7 +235,7 @@ footer {
 
 footer p {
     margin: 0;
-    font-family: 'Lora', serif; /* Czcionka Lora dla stopki */
+    font-family: 'Merriweather', serif; /* Czcionka Merriweather dla stopki */
 }
 
 /* --- Style dla list zadań / wpisów (quest-category, quest-entry) --- */
@@ -250,7 +249,7 @@ footer p {
 }
 
 .quest-category h3 {
-    font-family: 'MedievalSharp', cursive; /* Ozdobna czcionka dla nagłówków kategorii */
+    font-family: 'Roboto Slab', serif; /* Czcionka slab-serif dla nagłówków kategorii */
     color: #4a3c2e;
     font-size: 2.2em;
     text-align: left;
@@ -275,7 +274,7 @@ footer p {
 }
 
 .quest-entry h3 {
-    font-family: 'Lora', serif; /* Czcionka Lora dla nazw wpisów */
+    font-family: 'Merriweather', serif; /* Czcionka Merriweather dla nazw wpisów */
     color: #6a5c4e;
     font-size: 1.9em;
     margin-top: 0;
@@ -286,7 +285,7 @@ footer p {
 }
 
 .quest-entry p {
-    font-family: 'Lora', serif; /* Czcionka Lora dla paragrafów w wpisach */
+    font-family: 'Merriweather', serif; /* Czcionka Merriweather dla paragrafów w wpisach */
     font-size: 1.1em;
     color: #3b2b1d;
     margin-bottom: 8px;
@@ -342,7 +341,7 @@ hr {
 }
 
 .results-heading {
-    font-family: 'MedievalSharp', cursive; /* Ozdobna czcionka dla nagłówka wyników */
+    font-family: 'Roboto Slab', serif; /* Czcionka slab-serif dla nagłówka wyników */
     font-size: 2.5em;
     color: #4a3c2e;
     margin-bottom: 25px;
@@ -380,7 +379,7 @@ hr {
 }
 
 .submit-update-section p {
-    font-family: 'Lora', serif; /* Czcionka Lora dla paragrafu */
+    font-family: 'Merriweather', serif; /* Czcionka Merriweather dla paragrafu */
     font-size: 1.3em;
     color: #3b2b1d;
     margin-bottom: 40px;
@@ -408,7 +407,7 @@ iframe {
     border: none;
     background-color: #fdf5e6;
     color: #3b2b1d;
-    font-family: 'Lora', serif; /* Czcionka Lora dla iframe */
+    font-family: 'Merriweather', serif; /* Czcionka Merriweather dla iframe */
 }
 
 /* --- Dodatkowe efekty / klasy --- */
@@ -504,7 +503,6 @@ iframe {
         margin: 20px auto;
         border-width: 3px;
     }
-    /* Zmieniono selektory gwoździ/pinezek na klasy, aby działały poprawnie */
     main > .top-left-pin,
     main > .top-right-pin,
     main > .bottom-left-pin,
