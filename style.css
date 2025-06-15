@@ -1,6 +1,6 @@
 /* --- Importowanie czcionek z Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+/* Usunęliśmy import Creepster, ponieważ nie będzie już używana */
 
 /* --- Generalne style dla całej strony --- */
 body {
@@ -25,7 +25,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Creepster', cursive; /* Czcionka "Creepster" dla głównego tytułu */
+    font-family: 'VT323', monospace; /* Zmieniono na VT323 dla głównego tytułu */
     font-size: 3.5em; /* Duży, agresywny tytuł */
     text-transform: uppercase;
     text-shadow: 4px 4px #000000, 6px 6px #660000; /* Cień w stylu retro */
@@ -86,7 +86,7 @@ section:last-of-type {
 }
 
 section h2 {
-    font-family: 'Creepster', cursive; /* Czcionka "Creepster" dla nagłówków sekcji */
+    font-family: 'VT323', monospace; /* Zmieniono na VT323 dla nagłówków sekcji */
     color: #66ff66; /* Seledynowy kolor dla nagłówków sekcji */
     font-size: 2.8em;
     text-transform: uppercase;
@@ -194,7 +194,7 @@ footer p {
 }
 
 .quest-entry h3 {
-    font-family: 'Creepster', cursive; /* Czcionka Creepster dla nazw zadań */
+    font-family: 'VT323', monospace; /* Zmieniono na VT323 dla nazw zadań */
     color: #66ff66; /* SELEDYNOWY KOLOR DLA NAZW ZADAŃ */
     font-size: 1.8em;
     margin-top: 0;
@@ -251,7 +251,8 @@ footer p {
 }
 
 .dice-roller-section h2 {
-    /* Style dla h2 są już zdefiniowane w ogólnym .section h2 */
+    font-family: 'VT323', monospace; /* Zmieniono na VT323 dla nagłówka sekcji generatora kości */
+    /* Reszta stylów dla h2 jest już zdefiniowana w ogólnym .section h2 */
 }
 
 .container { /* Ten kontener jest specyficzny dla strony z kośćmi */
@@ -271,7 +272,7 @@ footer p {
 }
 
 .results-heading { /* Klasa dla nagłówka wyników rzutów */
-    font-family: 'Creepster', cursive;
+    font-family: 'VT323', monospace; /* Zmieniono na VT323 dla nagłówka wyników */
     font-size: 2em;
     color: #ff9933; /* Rdzawo-pomarańczowy */
     margin-bottom: 20px;
