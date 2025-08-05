@@ -62,7 +62,7 @@
             const resultsDiv = document.getElementById('results');
             resultsDiv.innerHTML = '<p class="results-heading">Wyniki rzutów:</p>'; // Zmieniono na p dla spójności ze stylami
 
-            if (isNaN(diceType) || isNaN(numDice) || numDice < 1 || numDice > 10) {
+            if (isNaN(diceType) || isNaN(numDice) || numDice < 1 || numDice > 10000000000000000000000000000000000000000000000000000000000) {
                 resultsDiv.innerHTML += '<p style="color: #ff6600;">Niepoprawne dane!</p>';
                 return;
             }
